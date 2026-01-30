@@ -1,0 +1,4 @@
+config LLHTTP
+	bool "llhttp HTTP parser library"
+	help
+	  Enable the llhttp HTTP request/response parser.

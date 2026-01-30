@@ -1,0 +1,14 @@
+if(CONFIG_LLHTTP)
+  zephyr_library()
+  zephyr_library_sources(
+    ${ZEPHYR_CURRENT_MODULE_DIR}/release/src/api.c
+    ${ZEPHYR_CURRENT_MODULE_DIR}/release/src/http.c
+    ${ZEPHYR_CURRENT_MODULE_DIR}/release/src/llhttp.c
+  )
+  zephyr_library_include_directories(
+    ${ZEPHYR_CURRENT_MODULE_DIR}/release/include
+  )
+  zephyr_include_directories(
+    ${ZEPHYR_CURRENT_MODULE_DIR}/release/include
+  )
+endif()

@@ -19,5 +19,5 @@ copyFileSync("README.md", "release/README.md");
 // release/CMakeLists.txt
 const pkg = JSON.parse(readFileSync("package.json", "utf8"));
 const cmake = readFileSync("CMakeLists.txt", "utf8");
-cmake.replace(/_RELEASE_/, pkg["version"]);
-writeFileSync("release/CMakeLists.txt", cmake);
+const out = cmake.replace(/_RELEASE_/, pkg["version"]);
+writeFileSync("release/CMakeLists.txt", out);
